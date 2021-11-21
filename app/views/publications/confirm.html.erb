@@ -1,0 +1,9 @@
+<h3>Send with the following contents.</h3>
+<%= form_with(model: @publication, local: true) do |form| %>
+  <%= form.hidden_field :image %>
+  <%= form.hidden_field :image_cache %>
+  <%= form.hidden_field :content %>
+  <p> <img src="<%= @publication.image %>"> </p>
+  <p>Content:<%= @publication.content %></p>
+  <%= form.submit  "register" %>
+<% end %>

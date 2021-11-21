@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Registration</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p id="notice"><%= notice %></p>
+
+    <div class="container">
+      <div class="text-center mt-5">
+        <h3>Welcome to Instagram</h3><br><br>
+            
+            <div class="container mt-44">
+              <div class="row">
+
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-4 mt-5 text-center card-body">
+                  
+                  
+                </div><div class="col-md-1">
+
+                </div>
+                <div class="col-md-4 mb-5 text-center card-body">
+                  <h1>
+                    Sign In !
+                  </h1>
+
+                  <form action="/sessions" method="POST">
+                    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"><br><br>
+
+                    <div class="form-outline mb-4">
+                      <input type="email" id="email" class="form-control" name="login[email]" />
+                      <label class="form-label" for="nom">Email</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="password" id="password" class="form-control" name="login[password]" />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+                    <input type="submit" name="Submit" class="btn btn-success" value="Sign In" style= "padding-right: 50px; padding-left: 50px; font-size: 17px;">
+                  </form>                  
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+
+              </div>
+            </div>
+
+      </div>
+      
+    </div>
+  <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
+  </body>
+</html>
+

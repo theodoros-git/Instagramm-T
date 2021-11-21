@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      publication: post
+      user: users
+    attributes:
+      publication:
+        image: image
+        content: content
+      user:
+        name: name
+        image: image
+        email: email
+        password: password

@@ -1,0 +1,59 @@
+<div class="container mb-2">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h1>New User</h1>
+                </div>
+                <div class="card-body">
+                     
+                     <%= form_with(model: user, local: true) do |form| %>
+                          <% if user.errors.any? %>
+                            <div id="error_explanation">
+                              <h2>
+                                <%= 
+                                  t("errors.template.header.one", model: user.model_name.human) if user.errors.count == 1
+                                  t("errors.template.header.other", model: user.model_name.human, count: user.errors.count) if user.errors.count > 1
+                                %>
+                              </h2>
+                              <ul>
+                                <% user.errors.full_messages.each do |message| %>
+                                  <li><%= message %></li>
+                                <% end %>
+                              </ul>
+                            </div>
+                          <% end %>
+
+                          <div class="field">
+                            <%= form.label :name %>
+                            <%= form.text_field :name %>
+                          </div><br>
+                          <div class="field">
+                            <%= form.label :image %>
+                            <%= form.file_field :image %>
+                          </div><br>
+
+                          <div class="field">
+                            <%= form.label :email %>
+                            <%= form.text_field :email %>
+                          </div><br>
+
+                          <div class="field">
+                            <%= form.label :password %>
+                            <%= form.password_field :password %>
+                          </div><br>
+
+                          
+                        
+                        <div class="text-center">
+                            <%= form.submit "Sign Up" %> 
+                        </div>
+                     <% end %>
+                 </div>
+                 <div class="card-footer"></div>
+             </div>
+         </div>
+         <div class="col-md-4"></div>
+    </div>
+</div>

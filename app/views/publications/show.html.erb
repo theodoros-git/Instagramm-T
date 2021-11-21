@@ -1,0 +1,48 @@
+<div class="container mb-8">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h1>Profile</h1>
+                </div>
+                <div class="card-body text-center">
+                     
+                     <p id="notice"><%= notice %></p>
+                    <p>
+                      <img
+                        src="<%= @publication.image %>"
+                        class="img-fluid"
+                        alt=""
+                        style="margin-top: 30px;"
+                      />
+                    </p>
+                    <p>
+                      <strong>Content:</strong>
+                      <%= @publication.content %>
+                    </p>
+
+                    <% unless @publication.user_id == current_user.id %>
+                      <% if @favorite.present? %>
+                        <%= link_to 'Remove favorite', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>||
+                      <% else %>
+                        <%= link_to 'Favorite', favorites_path(publication_id: @publication.id), method: :post, class: 'btn btn-primary' %>||
+                      <% end %>
+                    <% end %>
+                    
+                 </div>
+                 <div class="card-footer text-center">
+                   <%= link_to 'Edit', edit_publication_path(@publication) %> ||
+                   <%= link_to 'Back', publications_path %>  
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-2"></div>
+    </div>
+</div>
+
+
+
+
+
+

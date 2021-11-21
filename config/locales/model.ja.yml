@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      publication: 出版物
+      user: ユーザー
+    attributes:
+      publication:
+        image: 写真
+        content: コンテンツ
+      user:
+        name: 名前
+        image: 写真
+        email: 電子メールアドレス
+        password: パスワード
