@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Image:</strong>
+  <img
+    src="<%= @user.image %>"
+    class="img-fluid rounded-circle"
+    alt=""
+    style="height: 120px; width: 120px; margin-top: 30px;"
+  />
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

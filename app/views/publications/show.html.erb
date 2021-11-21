@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <img
+    src="<%= @publication.image %>"
+    class="img-fluid rounded-circle"
+    alt=""
+    style="height: 120px; width: 120px; margin-top: 30px;"
+  />
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @publication.content %>
+</p>
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>
