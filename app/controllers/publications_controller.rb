@@ -62,11 +62,11 @@ class PublicationsController < ApplicationController
   end
 
   private
-  def set_publication
-    @publication = Publication.find(params[:id])
-  end
+    def set_publication
+      @publication = Publication.find(params[:id])
+    end
 
-  def publication_params
-    params.require(:publication).permit(:image, :image_cache, :content)
-  end
+    def publication_params
+      params.require(:publication).permit(:image, :image_cache, :content)
+    end
 end
